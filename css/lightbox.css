@@ -1,0 +1,356 @@
+
+.modal-open {
+  overflow: hidden;
+}
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal.fade2 .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.modal-content {
+  position: relative;
+  /* background-color: transparent;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box; */
+  outline: 0;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+.modal-backdrop.fade2 {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.modal-header .close {
+  margin-top: -2px;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    margin: 30px auto;
+  }
+  .modal-content {
+    /* -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); */
+  }
+  .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+.clearfix:before,
+.clearfix:after,
+.modal-header:before,
+.modal-header:after,
+.modal-footer:before,
+.modal-footer:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.modal-header:after,
+.modal-footer:after {
+  clear: both;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.hidden {
+  display: none !important;
+}
+.affix {
+  position: fixed;
+}
+
+
+
+/*-------------------------
+
+         lightbox
+
+-------------------------*/
+/* ---------------------
+           共用
+---------------------- */
+.modal{ background-color: transparent;}
+
+
+/*背景底色*/
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+.modal-backdrop.fade2 {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+
+
+.modal-open .modal {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.modal .modal-content {
+  position: relative;
+  background-color: transparent;
+  border-radius: 0px;
+   /* border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box; */
+  outline: 0;
+}
+
+.style-box .modal-dialog{
+    padding: 0; margin: 0 auto;
+    /*  width: 1230px;min-height: 1250px; */
+}
+
+.style-box .modal-content{
+    min-width:100%;
+    border: none;
+    background-color: transparent;
+}
+.style-box .modal-body{
+    margin: auto;
+    text-align: center;
+    padding: 160px 0;
+
+}
+.style-box .modal-body img{
+
+}
+@media (min-width: 768px){
+    .modal-dialog {
+
+        margin: 0 auto;
+    }
+}
+
+
+/* 關閉按鈕 */
+.style-box .close{
+    position: absolute; right: 4%; top: 6%; z-index: 10;
+  /* font-size:4em;  color:#333;
+  font-family:'Noto Sans TC';  font-weight:100; */
+  text-shadow: none;
+    background-color: transparent;
+    opacity: 0.5;
+    cursor: pointer;
+  transition:all ease-in-out 0.2s;
+    height: 72px; width: 72px;
+    background: url(../images/close-btn.png) center top no-repeat;
+    border: none;
+}
+.style-box .close:hover{
+    opacity: 1;
+    transform: rotate(90deg);
+    transition:all ease-in-out 0.5s;
+
+}
+
+/*-------------------------
+        活動結束
+-------------------------*/
+
+#end .modal-body{
+   
+}
+#end p{
+   font-size:3em;  color:#fff;font-weight:400; 
+    text-align: center;
+    line-height: 80px;
+    padding-top: 50%;
+}
+
+/*-------------------------
+       補發mail
+-------------------------*/
+#Reissue .modal-body{
+    width: 80%; height: 500px;
+    margin: 20px auto;
+    background-color: #fff;
+    /* 
+    background: url(../images/data/reissue-box.png) no-repeat;
+    background-position: center top; */
+    
+}
+.style-box2 .modal-dialog{
+  
+}
+
+#Reissue .modal-content{
+    min-width: 100%;
+    border: none;
+    background-color: transparent;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+#Reissue .modal-body{
+    padding: 30px 40px;
+    
+}
+#Reissue .modal-body .form-3 h2{
+    font-size: 42px; line-height: 100px;  color:#000; font-weight:400;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+#Reissue .modal-body .form-3 .input-txt {
+    padding: 0 10px;
+    border: solid 1px #000;
+    width: 100%;
+    margin-bottom: 15px;
+}
+#Reissue .form-box-list label{
+    
+}
+
+#Reissue .send button{
+    width: 100%; height: 90px;
+    font-size:34px;
+    background-color: #000;
+    color: #fff; letter-spacing: 0.1em;
+    border:none;
+    margin: 0;
+    cursor: pointer;
+}
+#Reissue .send button:hover{
+    background-color: #333;
+}
+
+/* 關閉按鈕 */
+#Reissue .close{
+    position: absolute; right:85px; top: 0px; z-index: 10;
+  font-size:5em;  color:#999;
+  font-family:'Noto Sans TC';  font-weight:100;
+  text-shadow: none;
+    background-color: transparent;
+    opacity: 1;
+    cursor: pointer;
+  transition:all ease-in-out 0.2s;
+}
+#Reissue .close:hover{
+     /* background-color: rgba(255, 255, 255, 1); */
+    color:#000;
+}
+
